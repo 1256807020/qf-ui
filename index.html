@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WEBUI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #999;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+
+    #app {
+      padding: 20px;
+    }
+
+    body {
+      font-size: var(--font-size);
+    }
+  </style>
+  <style>
+    .icon {
+      width: 1em;
+      height: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <v5-button :loading="loadingCtl" @click="loadingCtl = !loadingCtl">
+      按钮
+    </v5-button>
+    <v5-button v5icon="settings" :loading="loadingCtl2" @click="loadingCtl2 = !loadingCtl2">
+      按钮
+    </v5-button>
+    <v5-button v5icon="download" v5-icon-position="right" :loading="loadingCtl3" @click="loadingCtl3 = !loadingCtl3">
+      按钮
+    </v5-button>
+    <v5-icon class="icon" name="dianzan"></v5-icon>
+    <v5-button-group>
+      <v5-button v5icon="zuo">上一页</v5-button>
+      <v5-button v5icon="">更多</v5-button>
+      <v5-button v5icon="you" v5-icon-position="right">下一页</v5-button>
+    </v5-button-group>
+    <div id="test"></div>
+  </div>
+</body>
+<script src="./src/app.js"></script>
+<!-- 引入图标 -->
+<script src="//at.alicdn.com/t/font_642759_w2zz2s4afh.js"></script>
+
+</html>
